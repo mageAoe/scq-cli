@@ -1,60 +1,42 @@
- - commander  可以跑命令行
-> npm install --save commander
+# scq_cli
 
-- chalk  对console的美工,命令里面会有一些颜色标识
-> npm install --save chalk
+<p align="center">
+    <br> English | <a href="README-CN.md">中文</a>
+</p>
+<p align="center">
+    <em>it's not just a scaffolding. - chovrio</em>
+</p>
 
-- download-git-repo 支持从 Github下载仓库，详细了解可以参考官方文档
-> npm install --save download-git-repo
+<p align="center">
+[![npm version](https://img.shields.io/npm/v/scq_cli.svg?style=flat-square)](https://www.npmjs.org/package/scq_cli)
+[![npm downloads](https://img.shields.io/npm/dm/scq_cli.svg?style=flat-square)](https://npm-stat.com/charts.html?package=scq_cli)
+[![install size](https://img.shields.io/badge/dynamic/json?url=https://packagephobia.com/v2/api.json?p=scq_cli&query=$.install.pretty&label=install%20size&style=flat-square)](https://packagephobia.now.sh/result?p=scq_cli)
+<a href="LICENSE" target="_blank">
+    <img alt="MIT License" src="https://img.shields.io/badge/license-MIT-blue?style=flat-square" />
+</a>
 
-- inquirer 命令行交互功能可以在用户执行 init 命令后，向用户提出问题，接收用户的输入并作出相应的处理。用 inquirer.js 来实现
-> npm install --save inquirer
+<a href="https://github.com/yetone/openai-translator/releases" target="_blank">
+<img alt="macOS" src="https://img.shields.io/badge/-macOS-black?style=flat-square&logo=apple&logoColor=white" />
+</a>
 
-- ora ora进度显示
-> npm install --save ora
+<a href="https://github.com/yetone/openai-translator/releases" target="_blank">
+<img alt="Windows" src="https://img.shields.io/badge/-Windows-blue?style=flat-square&logo=windows&logoColor=white" />
+</a>
 
-- log-symbols 在信息前面加上 √ 或 × 等的图标
-> npm install --save log-symbols
+<a href="https://github.com/yetone/openai-translator/releases" target="_blank">
+<img alt="Linux" src="https://img.shields.io/badge/-Linux-yellow?style=flat-square&logo=linux&logoColor=white" />
+</a>
 
-- handlebars.js，模板引擎，将用户提交的信息动态填充到文件中
+</p>
 
+# Foreword
 
-```js
-inquirer
-      .prompt([
-        {
-          type: 'input',
-          name: 'author',
-          message: '请输入你的名字'
-        }
-      ])
-      .then(answers => {
-        console.log(answers.author)
-        const lqProcess = ora('正在创建...')
-        lqProcess.start()
-        download(
-          'direct:https://github.com/mageAoe/vite-vue3-ts-template-.git',
-          name,
-          { clone: true },
-          err => {
-            if (err) {
-              lqProcess.fail()
-              console.log(symbols.error, chalk.red(err))
-            } else {
-              lqProcess.succeed()
-              const fileName = `${name}/package.json`
-              const meta = {
-                name,
-                author: answers.author
-              }
-              if (fs.existsSync(fileName)) {
-                const content = fs.readFileSync(fileName).toString()
-                const result = handlebars.compile(content)(meta)
-                fs.writeFileSync(fileName, result)
-              }
-              console.log(symbols.success, chalk.green('创建成功'))
-            }
-          }
-        )
-      })
+Well, it might just be a scaffolding.
+
+This project is for learning exchange only.
+
+# Install
+
+```shell
+npm install -g scq_cli # Global installation
 ```

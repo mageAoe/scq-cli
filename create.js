@@ -4,7 +4,7 @@ const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs-extra");
 const ora = require("ora");
-const download = require("download-git-repo");
+// const download = require("download-git-repo");
 const symbols = require('log-symbols')
 const pc = require('picocolors')
 const { resolve } = require('path')
@@ -17,14 +17,6 @@ async function createProject(projectName, answers) {
     const spinner = ora("Downloading template...").start();
 
   try {
-    // await downloadTemplate();
-    // spinner.succeed('Template downloaded.');
-
-    // const sourcePath = path.join(__dirname, 'template');
-    // const targetPath = path.join(process.cwd(), projectName);
-
-    // await fs.copy(sourcePath, targetPath);
-    // spinner.succeed('Template copied.');
 
     const { template } = await inquirer.prompt({
       type: "list",

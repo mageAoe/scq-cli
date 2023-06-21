@@ -6,14 +6,14 @@ const chalk = require('chalk')
 // const { __dirname } = require('../utils/nodeVariable')
 // console.log('Hello, cli!')
 const fs = require('fs-extra')
-const { resolve } = require('path')
+// const { resolve } = require('path')
 const program = require('commander')
-const download = require('download-git-repo')
+// const download = require('download-git-repo')
 const inquirer = require('inquirer')
-const ora = require('ora')
-const symbols = require('log-symbols')
-const handlebars = require('handlebars')
-const pc = require('picocolors')
+// const ora = require('ora')
+// const symbols = require('log-symbols')
+// const handlebars = require('handlebars')
+// const pc = require('picocolors')
 const { createProject } = require('./create');
 
 
@@ -33,36 +33,5 @@ program
 
     const answers = await inquirer.prompt(questions);
     createProject(projectName, answers);
-    // const { template } = await inquirer.prompt({
-    //     type: 'list',
-    //     name: 'template',
-    //     message: 'choose a template',
-    //     choices: [
-    //       'react',
-    //       'vue',
-    //       'react + typescript',
-    //       'vue + typescript',
-    //       'none'
-    //     ]
-    // });
-    // console.log(symbols.success, pc.green(`fetch template ${template}`));
-    // const fetchingSpinning = ora(pc.blue(`fetch template`)).start();
-    // fetchingSpinning.color = 'cyan';
-    // fetchingSpinning.stop();
-    // const copySpinner = ora(
-    //     pc.blue(`generate project by template...`)
-    // ).start();
-    // const realPath = await fs.realpath(process.cwd());
-
-    // const projectPath = realPath + '/' + projectName.toString();
-    // await fs.copy(resolve(__dirname, `./template/${template}`), projectPath);
-    // copySpinner.stop();
-    // const installSpinner = ora(
-    //     pc.blue(`generate project by template...`)
-    //   ).start();
-    // process.chdir(projectPath);
-    // installSpinner.stop();
-    // console.log(symbols.success, pc.green(`generate project by template`));
-    // console.log(symbols.success, chalk.green('create success'))
   })
 program.parse(process.argv)
