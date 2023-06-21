@@ -4,13 +4,20 @@
     <br> English | <a href="README-CN.md">中文</a>
 </p>
 <p align="center">
-    <em>it's not just a scaffolding. - chovrio</em>
+    <em>it's not just a scaffolding. - scq_cli</em>
 </p>
 
-<p align="center">
+<div align="center"> 
+
 [![npm version](https://img.shields.io/npm/v/scq_cli.svg?style=flat-square)](https://www.npmjs.org/package/scq_cli)
-[![npm downloads](https://img.shields.io/npm/dm/scq_cli.svg?style=flat-square)](https://npm-stat.com/charts.html?package=scq_cli)
-[![install size](https://img.shields.io/badge/dynamic/json?url=https://packagephobia.com/v2/api.json?p=scq_cli&query=$.install.pretty&label=install%20size&style=flat-square)](https://packagephobia.now.sh/result?p=scq_cli)
+    [![npm downloads](https://img.shields.io/npm/dm/scq_cli.svg?style=flat-square)](https://npm-stat.com/charts.html?package=scq_cli)
+    [![install size](https://img.shields.io/badge/dynamic/json?url=https://packagephobia.com/v2/api.json?p=scq_cli&query=$.install.pretty&label=install%20size&style=flat-square)](https://packagephobia.now.sh/result?p=scq_cli)
+
+</div>
+
+
+
+<p align="center">
 <a href="LICENSE" target="_blank">
     <img alt="MIT License" src="https://img.shields.io/badge/license-MIT-blue?style=flat-square" />
 </a>
@@ -39,4 +46,6 @@ This project is for learning exchange only.
 
 ```shell
 npm install -g scq_cli # Global installation
+
+scq init <project-name>
 ```
