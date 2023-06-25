@@ -23,10 +23,9 @@ async function createProject(projectName, answers) {
       name: "template",
       message: "choose a template",
       choices: [
-        "react",
-        "vue",
-        "react + typescript",
-        "vue + typescript",
+        "react + typescript + webpack",
+        "react + typescript + vite",
+        "vue + typescript + vite",
         "none",
       ],
     });
